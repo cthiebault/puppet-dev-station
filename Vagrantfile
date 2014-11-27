@@ -17,9 +17,14 @@ Vagrant.configure("2") do |config|
   # Use puppet provisionner to configure everything else
   config.vm.provision :puppet do |puppet|
     puppet.module_path = "modules"
-    puppet.manifest_file  = "init.pp"
+    puppet.manifests_path = "."
+    puppet.manifest_file  = "init-vagrant.pp"
     puppet.options = "-v -d"
-    puppet.facter = { "vagrant_box" => true }
+    puppet.facter = {
+      "vagrant_box" => true,
+      "home" => "/home/cthiebault",
+      "real_id" => "cthiebault"
+      }
   end
 
 end

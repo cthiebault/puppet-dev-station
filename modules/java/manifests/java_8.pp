@@ -2,7 +2,7 @@ class java::java_8 {
   
   include 'apt'
   
-  apt::source { 'webupd8team': 
+  apt::source { 'webupd8team-java':
     location    => 'http://ppa.launchpad.net/webupd8team/java/ubuntu',
     release     => 'trusty',
     repos       => 'main',

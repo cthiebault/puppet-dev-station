@@ -1,6 +1,7 @@
 class fish {
 
   include 'apt'
+  include 'git'
 
   File {
     owner => $real_id,

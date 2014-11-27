@@ -12,3 +12,7 @@ git::config { 'user.name':
 git::config { 'user.email':
   value => 'cedric.thiebault@gmail.com',
 }
+
+package { ['git-gui', 'gitk'] :
+  ensure => installed,
+}

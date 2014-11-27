@@ -22,8 +22,9 @@ class fish {
   ->
   # install fish as the default shell
   user { $real_id:
-    ensure => present,
-    shell  => "/usr/bin/fish",
+    ensure     => present,
+    shell      => "/usr/bin/fish",
+    managehome => true,
   }
   ->
   vcsrepo { "${home}/.oh-my-fish":

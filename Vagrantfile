@@ -18,7 +18,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision :puppet do |puppet|
     puppet.module_path = "modules"
     puppet.manifests_path = "."
-    puppet.manifest_file  = "init-vagrant.pp"
+    puppet.manifest_file  = "init.pp"
     puppet.options = "-v -d"
     puppet.facter = {
       "vagrant_box" => true,
@@ -28,3 +28,4 @@ Vagrant.configure("2") do |config|
   end
 
 end
+
